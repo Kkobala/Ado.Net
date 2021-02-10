@@ -13,28 +13,28 @@ Task status: mandatory / Manually-checked.  
 1. Create `Folder Database`
 1. Select folder in `Solution` explorer and Add Database `Customers`:  
     
-    ![](Pictures/ado.net/ado.net.1.png) 
+    ![](Pictures/ado.net.1.png) 
 
 1. You should get
    
-    ![](Pictures/ado.net/ado.net.2.png)   
+    ![](Pictures/ado.net.2.png)   
 
 1. Open `VS Server Explorer` and see your database in the server view
   
-    ![](Pictures/ado.net/ado.net.3.png)
+    ![](Pictures/ado.net.3.png)
 
 1. Add `Customers` Table to the `Customers.mdf` database
 
-    ![](Pictures/ado.net/ado.net.4.png)
+    ![](Pictures/ado.net.4.png)
 
 1. Rename the default name `Table` to `Customers` by running script
 
-    ![](Pictures/ado.net/ado.net.5.png)
+    ![](Pictures/ado.net.5.png)
 
 1. Refresh the Server Explorer View and make sure you got the database table renamed
 
-    ![](Pictures/ado.net/ado.net.6.png)
+    ![](Pictures/ado.net.6.png)
 
 1. Select `Customers.mdf` in Server Explorer view, open `Properties` window and copy a connection string to the database
 
-    ![](Pictures/ado.net/ado.net.7.png)
+    ![](Pictures/ado.net.7.png)
