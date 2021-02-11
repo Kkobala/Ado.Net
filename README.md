@@ -55,13 +55,15 @@ Task status: mandatory / Manually-checked.  
 
 1. Configure `appsettings.json` (Copy if newer)
 
+    ![](Pictures/ado.net.10.png)
+
 1. Move connection string value to the `appsettings.json`
 
-    ![](Pictures/ado.net.10.png)
+    ![](Pictures/ado.net.11.png)
 
 1. Change code in Main, so you read your connection settings from the appsettings.json file
 
-    ![](Pictures/ado.net.11.png)
+    ![](Pictures/ado.net.12.png)
 
 1. Run the application and make sure it works. Now you read the path to the database from the connection string. 
 
