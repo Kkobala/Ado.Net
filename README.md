@@ -49,14 +49,13 @@ Task status: mandatory / Manually-checked.  
     ![](Pictures/ado.net.8.png)
 
 1. Run the application and make sure it works
-1. Add appsettings.json and configure it
-
+1. Add `appsettings.json` and configure it
 
     ![](Pictures/ado.net.9.png)
 
-1. Configure appsettings.json (Copy if newer)
+1. Configure `appsettings.json` (Copy if newer)
 
-1. Move connection string value to the appsettings.json
+1. Move connection string value to the `appsettings.json`
 
     ![](Pictures/ado.net.10.png)
 
