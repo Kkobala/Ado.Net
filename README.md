@@ -45,4 +45,29 @@ Task status: mandatory / Manually-checked.  
 1. Add a local variable to the `Main` method to store the connection string (see sample below)
 1. Add a code to open the database connection using ADO.NET  and close the connection
 
+    ![](Pictures/ado.net.8.png)
+
+1. Run the application and make sure it works
+1. Add appsettings.json and configure it
+
+
+    ![](Pictures/ado.net.9.png)
+
+1. Configure appsettings.json (Copy if newer)
+
+1. Move connection string value to the appsettings.json
+
+    ![](Pictures/ado.net.10.png)
+
+1. Change code in Main, so you read your connection settings from the appsettings.json file
+
+    ![](Pictures/ado.net.11.png)
+
+1. Run the application and make sure it works. Now you read the path to the database from the connection string. 
+
+
+1. Add code for :
+    a.	Adding records to the database
+    b.	Deleting a record by the customer name
+    c.	Updating a record by the customer name
 
