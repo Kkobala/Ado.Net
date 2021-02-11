@@ -1,7 +1,10 @@
 # ADO.NET and EF Core
 
 ## Purpose
-The purpose of the task: to get a practical experience on how to work with ADO.NET to connect and store the applicatin data in the MS SQL local database. You will learn how to create a sample database using Visual Studio 2019, how to expolore and update properties of the database by using VS Server Explorer. You will also learn how to store the connection string in the appsetting.json configuration file. You will also learn how to read, update and delete data from the database tables using ADO.NET classes.
+The purpose of the task: to get a practical experience on how to work with ADO.NET to connect and store the applicatin data in the MS SQL local database. You will learn 
+- how to create a sample database using Visual Studio 2019, how to expolore and update properties of the database by using VS Server Explorer;
+- how to store the connection string in the appsetting.json configuration file;
+- how to read, update and delete data from the database tables using ADO.NET classes.
 
 Estimated time to complete: 3 hours.   
 
@@ -9,7 +12,7 @@ Task status: mandatory / Manually-checked.  
 
 ## Description
 1. Clone a skeleton solution from the repository provided by AutoCode
-1. Create a new project and add to the solution. Use the `Console App (.NET Core)`  VS 2019 project type
+1. Create a new project and add to the solution. Use the `Console App (.NET Core)` VS 2019 project type
 1. Create `Folder Database`
 1. Select folder in `Solution` explorer and Add Database `Customers`:  
     
@@ -38,3 +41,8 @@ Task status: mandatory / Manually-checked.  
 1. Select `Customers.mdf` in Server Explorer view, open `Properties` window and copy a connection string to the database
 
     ![](Pictures/ado.net.7.png)
+
+1. Add a local variable to the `Main` method to store the connection string (see sample below)
+1. Add a code to open the database connection using ADO.NET  and close the connection
+
+
