@@ -1,4 +1,4 @@
-# ADO.NET and EF Core
+# ADO.NET and EF Core. Basic
 
 ## Purpose
 The purpose of the task: to get a practical experience on how to work with ADO.NET to connect and store the applicatin data in the MS SQL local database.You will learn:
@@ -68,8 +68,10 @@ Task status: mandatory / Manually-checked.  
 1. Run the application and make sure it works. Now you read the path to the database from the connection string. 
 
 
-1. Add code for :
-    a.	Adding records to the database
-    b.	Deleting a record by the customer name
-    c.	Updating a record by the customer name
+1. Add code for:
+    - Adding records to the database
+    - Deleting a record by the customer name
+    - Updating a record by the customer name
+    - Getting all records
+    - etc.
 
