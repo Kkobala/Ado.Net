@@ -1,15 +1,15 @@
 # ADO.NET. Basics
 
 ## Purpose
-The purpose of the task: to get a practical experience on how to work with ADO.NET to connect and store the applicatin data in the MS SQL local database.You will learn:
+**The purpose of the task:** to get a practical experience on how to work with ADO.NET to connect and store the applicatin data in the MS SQL local database.You will learn:
 - how to create a sample database using Visual Studio 2019;
 - how to expolore and update properties of the database by using VS Server Explorer;
 - how to store the connection string in the appsetting.json configuration file;
 - how to read, update and delete data from the database tables using ADO.NET classes.
 
-Estimated time to complete: 3 hours.   
+**Estimated time to complete:** 3 hours.   
 
-Task status: mandatory / Manually-checked.   
+**Task status:** mandatory / manually-checked.   
 
 ## Description
 1. Clone a skeleton solution from the repository provided by AutoCode
