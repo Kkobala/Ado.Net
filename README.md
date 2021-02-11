@@ -1,4 +1,4 @@
-# ADO.NET. Basic
+# ADO.NET. Basics
 
 ## Purpose
 The purpose of the task: to get a practical experience on how to work with ADO.NET to connect and store the applicatin data in the MS SQL local database.You will learn:
