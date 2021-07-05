@@ -12,7 +12,7 @@
 **Task status:** mandatory / manually-checked.   
 
 ## Description
-1. Clone a skeleton solution from the repository provided by AutoCode
+1. Clone a skeleton solution from the repository provided by AutoCode.
 1. Create a new project and add to the solution. Use the `Console App (.NET Core)` VS 2019 project type
 1. Create `Folder Database`
 1. Select folder in `Solution` explorer and Add Database `Customers`:  
