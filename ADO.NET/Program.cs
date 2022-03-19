@@ -9,7 +9,6 @@ namespace AdoNet
 {
     public class Program
     {
-        #region GetConnectionString
         private static string GetConString()
         {
             var builder = new ConfigurationBuilder();
@@ -21,16 +20,14 @@ namespace AdoNet
 
             return config.GetConnectionString("DefaultConnection");
         }
-        #endregion
 
-        #region AddCustomer
         public string AddCustomers(int id, string name, string address)
         {
             CustomersRepo repo = new CustomersRepo();
 
             if (id == 0)
             {
-                throw new ArgumentNullException(nameof(name), "Id must not be 0");
+                throw new ArgumentNullException(nameof(id), "Id must not be 0");
             }
 
             if (string.IsNullOrEmpty(name))
@@ -61,9 +58,7 @@ namespace AdoNet
 
             return res;
         }
-        #endregion
 
-        #region DeleteCustomers
         public string DeleteCustomers(string name)
         {
             CustomersRepo repo = new CustomersRepo();
@@ -83,9 +78,7 @@ namespace AdoNet
             var res = repo.DeleteCustomer(name);
             return res;
         }
-        #endregion
 
-        #region UpdateCustomers
         public string UpdateCustomers(string name, string address)
         {
             CustomersRepo repo = new CustomersRepo();
@@ -110,16 +103,13 @@ namespace AdoNet
 
             return res;
         }
-        #endregion
-
-        #region GetAllCustomers
+        
         public string GetAllCustomers()
         {
             CustomersRepo repo = new CustomersRepo();
 
             return repo.GetAllCustomers();
         }
-        #endregion
         static void Main()
         {
             Console.WriteLine("Hello ADO.NET!");

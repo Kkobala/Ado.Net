@@ -11,7 +11,6 @@ namespace ADO.NET.Repository
 {
     public class CustomersRepo
     {
-        #region GetConnectionString
         private static string GetConString()
         {
             var builder = new ConfigurationBuilder();
@@ -23,9 +22,7 @@ namespace ADO.NET.Repository
 
             return config.GetConnectionString("DefaultConnection");
         }
-        #endregion
 
-        #region GetCustomer
         public string GetCustomerByID(int id)
         {
             string sql = "SELECT COUNT(*) FROM dbo.Customers WHERE Id = @id";
@@ -47,13 +44,13 @@ namespace ADO.NET.Repository
                 cnn.Open();
                 rowsAffected = (int)cmd.ExecuteScalar();
 
-                if (rowsAffected == 0)
+                if (rowsAffected > 0)
                 {
-                    sb.Append("Success");
+                    sb.Append("Can't find customer cause key exists");
                     return sb.ToString();
                 }
 
-                sb.Append("Can't add cause key exists");
+                sb.Append("Success");
 
                 cnn.Close();
 
@@ -106,7 +103,7 @@ namespace ADO.NET.Repository
 
                 if (rowsAffected == 0)
                 {
-                    sb.AppendLine("Could not find the customer with given name");
+                    sb.AppendLine("Could not find the customer by given name");
                     return sb.ToString();
                 }
 
@@ -137,13 +134,11 @@ namespace ADO.NET.Repository
                 throw new ArgumentException(nameof(sb), sb.ToString());
             }
         }
-        #endregion
 
-        #region AddCustomer
         public string AddCustomer(Customers body)
         {
             //The insert query
-            string sql = "INSERT INTO dbo.Customers (Id, Name, Address) VALUES ( @Id, @name, @address)";
+            string sql = "INSERT INTO dbo.Customers (Id, Name, Address) VALUES ( @Id, @Name, @Address)";
 
             StringBuilder sb = new StringBuilder();
 
@@ -157,8 +152,8 @@ namespace ADO.NET.Repository
 
                 //add the parameters for insert query
                 cmd.Parameters.Add(new SqlParameter("@Id", body.Id));
-                cmd.Parameters.Add(new SqlParameter("@name", body.Name));
-                cmd.Parameters.Add(new SqlParameter("@address", body.Address));
+                cmd.Parameters.Add(new SqlParameter("@Name", body.Name));
+                cmd.Parameters.Add(new SqlParameter("@Address", body.Address));
 
                 //open the connection and execute your query
                 cnn.Open();
@@ -193,9 +188,7 @@ namespace ADO.NET.Repository
                 throw new ArgumentException(nameof(sb), sb.ToString());
             }
         }
-        #endregion
 
-        #region DeleteCustomer
         public string DeleteCustomer(string name)
         {
             string sql = "DELETE FROM Customers WHERE Name = @name";
@@ -211,7 +204,7 @@ namespace ADO.NET.Repository
                 cmd.CommandType = CommandType.Text;
 
                 //add the parameter for delete query
-                cmd.Parameters.Add(new SqlParameter("@name", name));
+                cmd.Parameters.Add(new SqlParameter("Name", name));
 
                 //Open the connection and execute your query
                 cnn.Open();
@@ -247,9 +240,7 @@ namespace ADO.NET.Repository
             }
 
         }
-        #endregion
 
-        #region UpdateCustomer
         public string UpdateCustomer(string name, string address)
         {
             //The insert query
@@ -302,9 +293,7 @@ namespace ADO.NET.Repository
                 throw new ArgumentException(nameof(sb), sb.ToString());
             }
         }
-        #endregion
 
-        #region GetAllCustomers
         public string GetAllCustomers()
         {
             string sql = "SELECT Id, Name, Address FROM dbo.Customers";
@@ -328,6 +317,5 @@ namespace ADO.NET.Repository
 
             return sb.ToString();
         }
-        #endregion
     }
 }

@@ -13,15 +13,15 @@ using NUnit.Framework;
 namespace ADO.Net.Tests
 {
     [TestFixture]
-    public sealed class CustomerTests
+    public sealed class CustomersTests
     {
         // Add customers tests
-        // [TestCase(1, "Robertson", "892 Southern Avenue", ExpectedResult = "Success")]
-        // [TestCase(2, "Arnold", "2904 Thorn Street", ExpectedResult = "Success")]
-       // [TestCase(3, "Spencer", "2151 Murphy Court", ExpectedResult = "Success")]
-       // [TestCase(4, "Morales", "3380 Lightning Point Drive", ExpectedResult = "Success")]
-       // [TestCase(5, "Jones", "4857 Blackwell Street", ExpectedResult = "Success")]
-        // [TestCase(6, "Reynolds", "703 Ashford Drive", ExpectedResult = "Success")]
+        [TestCase(1, "Robertson", "892 Southern Avenue", ExpectedResult = "Success")]
+        [TestCase(2, "Arnold", "2904 Thorn Street", ExpectedResult = "Success")]
+        [TestCase(3, "Spencer", "2151 Murphy Court", ExpectedResult = "Success")]
+        [TestCase(4, "Morales", "3380 Lightning Point Drive", ExpectedResult = "Success")]
+        [TestCase(5, "Jones", "4857 Blackwell Street", ExpectedResult = "Success")]
+        [TestCase(6, "Reynolds", "703 Ashford Drive", ExpectedResult = "Success")]
         public string AddCustomersTestSuccess(int id, string name, string address)
         {
             Program res = new Program();
@@ -55,8 +55,8 @@ namespace ADO.Net.Tests
         // End of end customers tests
 
         // Delete customer tests
-        // [TestCase("Robertson", ExpectedResult = "Success")]
-        // [TestCase("Arnold", ExpectedResult = "Success")]
+        [TestCase("Robertson", ExpectedResult = "Success")]
+        [TestCase("Arnold", ExpectedResult = "Success")]
         public string DeleteCustomerTestSuccess(string name)
         {
             Program res = new Program();
@@ -81,8 +81,8 @@ namespace ADO.Net.Tests
         // end of delete customer tests 
 
         // Update customers
-        // [TestCase("Jones", "4900 Blackwull str", ExpectedResult = "Success")]
-        // [TestCase("Reynolds", "720 Rashford Drive", ExpectedResult = "Success")]
+        [TestCase("Jones", "4900 Blackwull str", ExpectedResult = "Success")]
+        [TestCase("Reynolds", "720 Rashford Drive", ExpectedResult = "Success")]
         public string UpdateCustomersSuccess(string name, string address)
         {
             Program res = new Program();
