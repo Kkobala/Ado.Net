@@ -27,12 +27,12 @@ namespace AdoNet
 
             if (id == 0)
             {
-                throw new ArgumentNullException(nameof(name), "Id must not be 0");
+                throw new ArgumentNullException(nameof(name), "Id shouldn't be 0");
             }
 
             if (string.IsNullOrEmpty(name))
             {
-                throw new ArgumentNullException(nameof(name), "Name must not be empty");
+                throw new ArgumentNullException(nameof(name), "Empty name isn't allowed");
             }
 
             if (string.IsNullOrEmpty(address))
