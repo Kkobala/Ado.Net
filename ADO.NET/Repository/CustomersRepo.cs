@@ -46,7 +46,7 @@ namespace ADO.NET.Repository
 
                 if (rowsAffected > 0)
                 {
-                    sb.Append("Can't find customer cause key exists");
+                    sb.Append("Can't add cause key exists");
                     return sb.ToString();
                 }
 
@@ -103,7 +103,7 @@ namespace ADO.NET.Repository
 
                 if (rowsAffected == 0)
                 {
-                    sb.AppendLine("Could not find the customer by given name");
+                    sb.AppendLine("Could not find the customer with given name");
                     return sb.ToString();
                 }
 
