@@ -42,7 +42,7 @@ namespace AdoNet
 
             var check = repo.GetCustomerByID(id);
 
-            if (check != "Success")
+            if (check != "Found")
             {
                 throw new ArgumentException(nameof(name));
             }

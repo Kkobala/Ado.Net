@@ -50,7 +50,7 @@ namespace ADO.NET.Repository
                     return sb.ToString();
                 }
 
-                sb.Append("Success");
+                sb.Append("Found");
 
                 cnn.Close();
 
