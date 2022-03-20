@@ -24,7 +24,7 @@ namespace ADO.Net.Tests
             Assert.Throws<ArgumentException>(() => res.AddCustomers(id, name, address));
         }
 
-        [TestCase(3, "", "532 BackStreet Avenue")]
+        [TestCase(3, "", "532 Back Street")]
         [TestCase(4, "Jim", null)]
         [TestCase(0, "", "")]
         public void AddCustomerNullAndEmptyValueTests(int id, string name, string address)
