@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 using System.IO;
 using Microsoft.Extensions.Configuration;
 using ADO.NET.Model;
-using ADO.NET.Repository;
+using ADO.NET.Store;
 
 namespace AdoNet
 {
@@ -23,7 +23,7 @@ namespace AdoNet
 
         public string AddCustomers(int id, string name, string address)
         {
-            CustomersRepo repo = new CustomersRepo();
+            CustomersStore repo = new CustomersStore();
 
             if (id == 0)
             {
@@ -61,7 +61,7 @@ namespace AdoNet
 
         public string DeleteCustomers(string name)
         {
-            CustomersRepo repo = new CustomersRepo();
+            CustomersStore repo = new CustomersStore();
 
             if (string.IsNullOrEmpty(name))
             {
@@ -81,7 +81,7 @@ namespace AdoNet
 
         public string UpdateCustomers(string name, string address)
         {
-            CustomersRepo repo = new CustomersRepo();
+            CustomersStore repo = new CustomersStore();
 
             if (string.IsNullOrEmpty(name))
             {
@@ -106,7 +106,7 @@ namespace AdoNet
         
         public string GetAllCustomers()
         {
-            CustomersRepo repo = new CustomersRepo();
+            CustomersStore repo = new CustomersStore();
 
             return repo.GetAllCustomers();
         }
