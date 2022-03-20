@@ -27,7 +27,7 @@ namespace AdoNet
 
             if (id == 0)
             {
-                throw new ArgumentNullException(nameof(name), "Id shouldn't be 0");
+                throw new ArgumentNullException(nameof(name), "Id should not be 0");
             }
 
             if (string.IsNullOrEmpty(name))
