@@ -37,7 +37,7 @@ namespace AdoNet
 
             if (string.IsNullOrEmpty(address))
             {
-                throw new ArgumentNullException(nameof(address), "Address must not be empty");
+                throw new ArgumentNullException(nameof(address), "The address must be specified");
             }
 
             var check = repo.GetCustomerByID(id);
@@ -65,14 +65,14 @@ namespace AdoNet
 
             if (string.IsNullOrEmpty(name))
             {
-                throw new ArgumentNullException(nameof(name), "Must not be empty nor null");
+                throw new ArgumentNullException(nameof(name), "Name must not be empty neither null");
             }
 
             var check = repo.GetCustomerByName(name);
 
             if (check != "Found")
             {
-                throw new ArgumentNullException(nameof(name), "Could not find the customer with given name");
+                throw new ArgumentNullException(nameof(name), "A person with the given name could not be found");
             }
 
             var res = repo.DeleteCustomer(name);
@@ -85,18 +85,18 @@ namespace AdoNet
 
             if (string.IsNullOrEmpty(name))
             {
-                throw new ArgumentNullException(nameof(name), "Name must not be empty");
+                throw new ArgumentNullException(nameof(name), "Empty name isn't allowed");
             }
 
             if (string.IsNullOrEmpty(address))
             {
-                throw new ArgumentNullException(nameof(address), "Address must not be empty");
+                throw new ArgumentNullException(nameof(address), "The address must be specified");
             }
 
             var check = repo.GetCustomerByName(name);
             if (check != "Found")
             {
-                throw new ArgumentNullException(nameof(name), "Could not find the customer with given name");
+                throw new ArgumentNullException(nameof(name), "A person with the given name could not be found");
             }
 
             var res = repo.UpdateCustomer(name, address);
