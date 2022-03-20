@@ -44,9 +44,9 @@ namespace ADO.NET.Repository
                 cnn.Open();
                 rowsAffected = (int)cmd.ExecuteScalar();
 
-                if (rowsAffected > 0)
+                if (rowsAffected == 0)
                 {
-                    sb.Append("Can't add cause key exists");
+                    sb.Append("Can't Find customer cause key exists");
                     return sb.ToString();
                 }
 
